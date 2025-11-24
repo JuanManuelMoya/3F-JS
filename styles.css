@@ -1,0 +1,299 @@
+/* RESET / BASE */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background:#fbe5e5;
+    color:#300;
+    line-height:1.6;
+}
+
+/* Layout */
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:0 auto;
+    padding:20px 0;
+}
+
+section{
+    padding:80px 0;
+}
+
+/* Pokémon-ish typography */
+h1,h2,h3{
+    margin-bottom:15px;
+    font-family: "Franklin Gothic Heavy","Impact","Arial Black",sans-serif;
+    letter-spacing:.8px;
+}
+
+p{
+    margin-bottom:15px;
+}
+
+
+/* Botón */
+.btn{
+    background:#c11111;
+    color:white;
+    padding:12px 25px;
+    display:inline-block;
+    border-radius:6px;
+    text-decoration:none;
+    font-weight:700;
+    transition:.28s;
+    border:none;
+}
+.btn:hover{
+    background:#8d0000;
+    box-shadow:0 0 12px rgba(150,0,0,.6);
+    transform:translateY(-2px);
+}
+
+/* Header */
+header{
+    background:#700000;
+    color:white;
+    padding:22px 0;
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:100;
+    box-shadow:0 4px 15px rgba(0,0,0,.25);
+}
+
+.header-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:26px;
+    font-weight:900;
+    letter-spacing:1px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+nav ul li{
+    margin-left:26px;
+}
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+}
+nav ul li a:hover{
+    color:#ffbaba;
+}
+
+.menu-toggle{
+    display:none;
+    background:none;
+    border:none;
+    color:white;
+    font-size:24px;
+}
+
+/* HERO */
+#inicio{
+    background:
+        linear-gradient( rgba(168,0,0,0.92), rgba(70,0,0,.92) ),
+        url('https://via.placeholder.com/1920x1080') center/cover;
+    color:#fded03;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    text-align:center;
+}
+
+
+.hero-content{
+    max-width:800px;
+    margin:0 auto;
+}
+
+.hero-content h1{
+    font-size:3.3rem;
+    margin-bottom:15px;
+}
+
+
+/* --- SECTION PRINCIPAL --- */
+#seccion-principal{
+    background:black;
+    padding:40px;
+    border-radius:12px;
+    margin-top:50px;
+    box-shadow:0 0 18px rgba(0,0,0,.1);
+    color:#fded03;
+    
+}
+
+.intro{
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.35;
+    text-shadow: 0 0 7px rgba(255, 0, 0, 0.4);
+    color:#fded03;
+}
+
+/* CARDS vertical */
+.cards{
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+}
+
+.card{
+    background:#4e06e7;
+    padding:22px;
+    border-radius:12px;
+    border:3px solid #b40000;
+    box-shadow:0 4px 12px rgba(0,0,0,.18);
+    transition:.3s;
+}
+.card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 0 18px rgba(200,0,0,.7);
+}
+
+
+/* curiosidades / acordeón */
+.curiosidades{
+    cursor:pointer;
+}
+
+.curiosidades .contenido{
+    display:none;
+    opacity:0;
+    transition:opacity .35s ease;
+}
+
+.curiosidades.opened .contenido{
+    display:block;
+    opacity:1;
+}
+
+.arrow{
+    float:right;
+    transition:.35s;
+}
+.curiosidades.opened .arrow{
+    transform:rotate(180deg);
+}
+
+/* API */
+#api{
+    background:#0a013a;
+}
+
+.api-container{
+    text-align:center;
+    background: #000c03;
+}
+
+.api-content{
+    display:flex;
+    flex-wrap:wrap;
+    gap:26px;
+    justify-content:center;
+}
+
+.api-item{
+    width:300px;
+    background:#FFCB05;
+    padding:20px;
+    border-radius:12px;
+    border:3px solid #f5f4eb;
+    box-shadow:0 4px 12px rgba(0,0,0,.2);
+    transition:.3s;
+}
+
+.api-item:hover{
+    transform:translateY(-3px);
+    box-shadow:0 0 18px rgba(242, 242, 245, 0.6);
+}
+
+.api-item img{
+    width:100%;
+    height:220px;
+    object-fit:contain;
+}
+
+
+/* FORMULARIO */
+#formulario{
+    background:#7e0303;
+}
+
+.form-container{
+    max-width:900px;
+    width:92%;
+    margin:0 auto;
+    background:#FFCB05;
+    padding:45px;
+    border-radius:12px;
+    box-shadow:0 6px 26px rgba(0,0,0,.2);
+    border:4px solid #b40000;
+}
+
+.form-group{
+    margin-bottom:22px;
+}
+
+label{
+    font-weight:700;
+    margin-bottom:6px;
+    display:block;
+}
+
+input,textarea,select{
+    width:100%;
+    padding:12px;
+    border-radius:6px;
+    border:1px solid #aa5555;
+    font-size:1rem;
+}
+input:focus,textarea:focus,select:focus{
+    border-color:red;
+}
+
+.error{
+    color:#d10000;
+    margin-top:5px;
+    font-size:.85rem;
+    display:none;
+}
+
+.success-message{
+    background:#7bcf7b;
+    color:white;
+    padding:12px;
+    border-radius:6px;
+    margin-top:18px;
+    display:none;
+}
+
+
+/* FOOTER */
+footer{
+    background:#5f0000;
+    color:white;
+    text-align:center;
+    padding:35px;
+}
+
+
+

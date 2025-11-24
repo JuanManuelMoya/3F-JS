@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Plantilla TP FINAL JS</title>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">Plantilla TP final JS</div>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#api">Pokédex API</a></li>
+                    <li><a href="#formulario">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- SECCIÓN PRINCIPAL -->
+    <section id="inicio">
+        <div class="container">
+            <div class="hero-content">
+                <h1>¡Bienvenidos a la PokéPágina!</h1>
+
+                <section id="seccion-principal">
+                    <p class="intro">
+                        Sumérgete en el vasto mundo Pokémon. <br>
+                        Esta página está dedicada a explorar algunos <br>
+                        de los aspectos más fascinantes de estas criaturas.
+                    </p>
+
+                    <div class="cards">
+                        <div class="card">
+                            <h2>La Historia</h2>
+                            <p>Pokémon nació en Japón en 1996, creado por 
+                            Satoshi Tajiri e inspirado en su infancia capturando insectos.
+                            El primer lanzamiento fueron los videojuegos Pokémon Red & Green para Game Boy, que presentaban el concepto central: capturar, entrenar y combatir criaturas llamadas Pokémon.
+                            El fenómeno creció rápidamente y se expandió a serie animada, cartas coleccionables y merchandising global.
+                            En 1998 llegó a Occidente acompañado del anime y se convirtió en un éxito internacional.
+                            Con el tiempo, las diferentes generaciones de videojuegos añadieron nuevas regiones, mecánicas y cientos de especies adicionales.
+                            La franquicia evolucionó con títulos como Pokémon GO en 2016, que llevó la experiencia a la realidad aumentada y revolucionó la cultura pop.
+                            Hoy, Pokémon es una de las franquicias más exitosas y reconocibles del mundo, con más de mil especies, múltiples series y millones de fans.</p>
+                        </div>
+
+                        <div class="card">
+                            <h2>Los Tipos</h2>
+                            <p>Existen 18 tipos elementales, cada uno con fortalezas y debilidades.<br>
+                                🔥 El fuego ardía con fuerza, pero temía al agua.<br>
+                                💧 El agua podía apagar el fuego, pero las plantas la atrapaban.<br>
+                                🌱 Las plantas crecían rápido, pero se quemaban con el fuego.<br>
+                                ⚡ Y la electricidad viajaba por el aire hasta alcanzar a los que vivían cerca del agua.<br>
+                                Con el tiempo encontraron más:<br>
+                                🌪 algunos podían volar,<br>
+                                🪨 otros eran tan duros como rocas,<br>
+                                👻 y otros podían atravesar paredes como fantasmas.
+                            </p>
+                        </div>
+
+                        <div id="desplegable-tipos" class="card curiosidades">
+                            <h3>Curiosidades <span class="arrow">▼</span></h3>
+
+                            <div class="contenido">
+                                <ul>
+                                    <li>Satoshi Tajiri se inspiró en capturar insectos de niño.</li>
+                                    <li>El Pokémon más pesado es Cosmoem (999.9 kg).</li>
+                                    <li>Magikarp puede saltar hasta 10 metros de altura.</li>
+                                    <li>Pikachu originalmente iba a ser azul.</li>
+                                    <li>Algunos Pokémon brillan.</li>
+                                    <li>El primer diseño fue Rhydon.</li>
+                                    <li>Clefairy iba a ser el protagonista del anime..</li>
+                                    <li>Woobat enamora con el sonido de su corazón.</li>
+                                    <li>Hay Pokémon más antiguos que la humanidad.</li>
+                                    <li>Regigigas movió CONTINENTES enteros.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <a href="#api" class="btn">Explorar Más</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN API -->
+    <section id="api">
+        <div class="container api-container">
+            <h2>Pokédex Dinámica</h2>
+            <p>Pulsa el botón para cargar un Pokémon aleatorio y ver su información.</p>
+
+            <div class="api-content" id="apiContent"></div>
+            
+            <button id="cargarDatos" class="btn" style="margin-top: 30px;">Cargar Pokémon</button>
+        </div>
+    </section>
+
+    <!-- SECCIÓN FORMULARIO -->
+    <section id="formulario">
+        <div class="container">
+            <div class="form-container">
+                <h2>Conviértete en Entrenador</h2>
+                <p>Completa el formulario para obtener tu licencia oficial de la Liga.</p>
+                
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="nombre">Nombre completo</label>
+                        <input type="text" id="nombre" name="nombre">
+                        <div class="error" id="errorNombre"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" name="email">
+                        <div class="error" id="errorEmail"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="asunto">Asunto</label>
+                        <select id="asunto" name="asunto">
+                            <option value="">Selecciona un asunto</option>
+                            <option value="consulta">Consulta</option>
+                            <option value="sugerencia">Sugerencia</option>
+                            <option value="problema">Reportar problema</option>
+                        </select>
+                        <div class="error" id="errorAsunto"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="5"></textarea>
+                        <div class="error" id="errorMensaje"></div>
+                    </div>
+                    
+                    <button type="submit" class="btn">Enviar Mensaje</button>
+                </form>
+                
+                <div class="success-message" id="successMessage">
+                    ¡Gracias por tu mensaje! Te contactaremos pronto.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 MiSitioWeb. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+
